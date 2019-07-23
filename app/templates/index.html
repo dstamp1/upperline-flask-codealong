@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <img src="static/micropig.jpg",width="200">
+        
+        <h1 style="color:{{user.fav_color}}">Hello {{ user.name }}!</h1>
+        <h2>Today's Weather</h2>
+            <ul>
+                <li>Temperature: {{weather.temperature}}</li>
+                <li>Cloud Cover: {{weather.cloud}}</li>
+            </ul>
+            
+        <form method="post" action="/sendBreakfast">
+          <label for="nickname">What's your nickname?</label>
+          <input type='text' name='nickname'><br>
+
+          <label for="breakfast">What did you have for breakfast?</label>
+          <input type='text' name='breakfast'><br>
+          
+          <input name="submit" type='submit'>
+        </form>
+        
+    </body>
+</html>
